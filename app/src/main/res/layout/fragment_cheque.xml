@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/beer_background">
+
+    <Button
+        android:id="@+id/confirm_cheque"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Confirm"
+        android:fontFamily="monospace"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/darker_beer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCheque"
+        android:layout_marginLeft="70dp"/>
+
+    <TextView
+        android:id="@+id/cheque_loading_text"
+        android:text="Loading..."
+        android:textSize="20pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/delete_cheque"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Delete"
+        android:fontFamily="monospace"
+        android:backgroundTint="@color/darker_beer"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCheque"
+        android:layout_marginRight="70dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCheque"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="120dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

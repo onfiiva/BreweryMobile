@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/beer_background">
+
+    <TextView
+        android:id="@+id/from_text"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="Pg:"
+        android:gravity="center"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pahination_from_search"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/grey_element"
+        android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@+id/from_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/to_text"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Ent:"
+        android:gravity="center"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@id/pahination_from_search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pahination_to_search"
+        android:fontFamily="monospace"
+        android:textSize="10pt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:backgroundTint="@color/grey_element"
+        app:layout_constraintStart_toEndOf="@id/to_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/search_text"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Search:"
+        android:textSize="10pt"
+        app:layout_constraintStart_toEndOf="@id/pahination_to_search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/beer_search"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:backgroundTint="@color/grey_element"
+        android:fontFamily="monospace"
+        android:textSize="10pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:backgroundTint="@color/grey_element"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/beer_search"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/beer_loading_text"
+        android:text="Loading..."
+        android:textSize="20pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBeer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
