@@ -1,7 +1,7 @@
 # BreweryMobile
 Brewery Mobile App
 
-Android Studio Brewery project for User to order Beer;
+Android Studio Brewery project using Brewery API for User to order Beer;
 
 Some features as:
 - Authorization using token;
